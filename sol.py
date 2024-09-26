@@ -42,3 +42,22 @@ class Monster:
     def take_damage(self):
         self.is_alive = False
         print(f"Монстр {self.name} побежден!")
+
+# Пример работы программы
+
+# Создаем бойца и монстра
+fighter = Fighter("Воин")
+monster = Monster("Дракон")
+
+# Боец выбирает меч и атакует монстра
+sword = Sword()
+fighter.changeWeapon(sword)
+fighter.attack()
+monster.take_damage()
+
+# Боец выбирает лук и атакует другого монстра
+monster = Monster("Гоблин")  # Новый монстр
+bow = Bow()
+fighter.changeWeapon(bow)
+fighter.attack()
+monster.take_damage()
