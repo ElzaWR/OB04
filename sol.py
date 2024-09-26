@@ -32,3 +32,13 @@ class Fighter:
             self.weapon.attack()
         else:
             print(f"{self.name} не вооружен!")
+
+# Класс для монстра
+class Monster:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+
+    def take_damage(self):
+        self.is_alive = False
+        print(f"Монстр {self.name} побежден!")
